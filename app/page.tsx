@@ -12,7 +12,11 @@ export default function HomePage() {
       className="min-h-screen"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
+      transition={{ 
+        duration: 0.8, 
+        ease: 'easeOut',
+        delay: 0.2
+      }}
     >
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 py-20 lg:py-32">
@@ -22,36 +26,42 @@ export default function HomePage() {
             className="absolute top-20 left-10 w-32 h-32 border-2 border-blue-500 rounded-lg"
             animate={{
               rotate: [0, 360],
-              scale: [1, 1.1, 1],
+              scale: [1, 1.2, 1],
+              opacity: [1, 0.8, 1]
             }}
             transition={{
               duration: 20,
               repeat: Number.POSITIVE_INFINITY,
               ease: "linear",
+              repeatDelay: 0.5
             }}
           />
           <motion.div
             className="absolute top-40 right-20 w-24 h-24 border-2 border-green-500 rounded-full"
             animate={{
-              y: [0, -20, 0],
+              y: [0, -30, 0],
               opacity: [0.5, 1, 0.5],
+              scale: [1, 1.1, 1]
             }}
             transition={{
               duration: 4,
               repeat: Number.POSITIVE_INFINITY,
               ease: "easeInOut",
+              repeatDelay: 0.2
             }}
           />
           <motion.div
             className="absolute bottom-20 left-1/4 w-16 h-16 bg-purple-500 rounded-full"
             animate={{
-              x: [0, 30, 0],
-              scale: [1, 1.2, 1],
+              x: [0, 40, 0],
+              scale: [1, 1.3, 1],
+              opacity: [1, 0.8, 1]
             }}
             transition={{
               duration: 6,
               repeat: Number.POSITIVE_INFINITY,
               ease: "easeInOut",
+              repeatDelay: 0.3
             }}
           />
         </div>
