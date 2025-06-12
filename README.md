@@ -1,6 +1,6 @@
-# Sayan's Portfolio
+# Modern Portfolio Template
 
-A modern, responsive portfolio website built with Next.js 14 and Tailwind CSS. This portfolio showcases my work, skills, and professional journey in an elegant and interactive way.
+A modern, responsive portfolio website template built with Next.js 14 and Tailwind CSS. This template provides a beautiful and interactive way to showcase your work, skills, and professional journey.
 
 ![Portfolio Preview](public/preview.png)
 
@@ -14,6 +14,8 @@ A modern, responsive portfolio website built with Next.js 14 and Tailwind CSS. T
 - 🎭 Smooth animations with Framer Motion
 - 📊 Interactive data visualization with Recharts
 - 🎯 SEO optimized
+- 📧 Contact form with email integration
+- 🔍 Easy customization and theming
 
 ## 🛠️ Technologies Used
 
@@ -29,7 +31,7 @@ A modern, responsive portfolio website built with Next.js 14 and Tailwind CSS. T
 ## 🏗️ Project Structure
 
 ```
-sayan-portfolio/
+portfolio-template/
 ├── app/              # Next.js app directory
 ├── components/       # Reusable UI components
 ├── data/            # Static data and content
@@ -50,8 +52,8 @@ sayan-portfolio/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/sayan-portfolio.git
-   cd sayan-portfolio
+   git clone https://github.com/yourusername/portfolio-template.git
+   cd portfolio-template
    ```
 
 2. Install dependencies:
@@ -59,12 +61,18 @@ sayan-portfolio/
    pnpm install
    ```
 
-3. Run the development server:
+3. Configure your personal information:
+   - Update the content in `data/` directory
+   - Modify the theme colors in `styles/globals.css`
+   - Replace images in `public/` directory
+   - Update metadata in `app/layout.tsx`
+
+4. Run the development server:
    ```bash
    pnpm dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Building for Production
 
@@ -80,17 +88,29 @@ pnpm start
 - `pnpm start` - Start production server
 - `pnpm lint` - Run ESLint
 
-## 🤝 Contributing
+## 🎨 Customization
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/sayan-portfolio/issues).
+### Theme Colors
+Edit the color scheme in `styles/globals.css` to match your personal brand.
+
+### Content
+Update the following files to personalize your portfolio:
+- `data/projects.ts` - Add your projects
+- `data/skills.ts` - List your skills
+- `data/experience.ts` - Add your work experience
+- `data/education.ts` - Add your education details
+
+### Images
+Replace the following images in the `public` directory:
+- `profile.jpg` - Your profile picture
+- `preview.png` - Portfolio preview image
+- Project screenshots in `public/projects/`
+
+
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-**Sayan** - [Your GitHub Profile](https://github.com/yourusername)
 
 ## 🙏 Acknowledgments
 
