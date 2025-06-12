@@ -39,24 +39,5 @@ export const projects = [
     githubUrl: "https://github.com/sayan-sasmal/web-scraping-pipeline",
     liveUrl: null,
   },
-  {
-    id: 5,
-    title: "Financial Data Analysis with Tableau",
-    description: "Interactive Tableau dashboard for financial performance analysis and forecasting.",
-    longDescription:
-      "Created an interactive Tableau dashboard to analyze financial performance metrics, identify trends, and provide forecasting capabilities. The dashboard includes profit/loss analysis, cash flow visualization, and predictive modeling for budget planning.",
-    tools: ["Tableau", "SQL", "Excel", "Python"],
-    githubUrl: "https://github.com/sayan-sasmal/financial-analysis-tableau",
-    liveUrl: "https://public.tableau.com/views/FinancialAnalysis/Dashboard1",
-  },
-  {
-    id: 6,
-    title: "HR Analytics Dashboard",
-    description: "Comprehensive HR analytics solution for employee performance and retention analysis.",
-    longDescription:
-      "Built an HR analytics dashboard to track employee performance, analyze retention rates, and identify factors affecting employee satisfaction. The solution includes predictive models for employee turnover and recommendations for HR strategy optimization.",
-    tools: ["Power BI", "Python", "SQL", "Excel", "Statistics"],
-    githubUrl: "https://github.com/sayan-sasmal/hr-analytics",
-    liveUrl: "https://app.powerbi.com/view?r=eyJrIjoiaHJhbmFseXRpY3M",
-  },
+ 
 ]
