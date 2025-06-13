@@ -114,18 +114,18 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold mb-6">Let's Connect</h2>
               <div className="space-y-4">
                 <a
-                  href="mailto:sayan.sasmal@example.com"
+                  href="mailto:mr.sayansasmal18@gmail.com"
                   className="flex items-center gap-3 p-4 rounded-lg bg-card border hover:bg-accent transition-colors"
                 >
                   <Mail className="h-5 w-5 text-blue-600" />
                   <div>
                     <div className="font-medium">Email</div>
-                    <div className="text-sm text-muted-foreground">sayan.sasmal@example.com</div>
+                    <div className="text-sm text-muted-foreground">mr.sayansasmal18@gmail.com</div>
                   </div>
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/sayan-sasmal"
+                  href="https://www.linkedin.com/in/sayan-sasmal-481bbb254/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-4 rounded-lg bg-card border hover:bg-accent transition-colors"

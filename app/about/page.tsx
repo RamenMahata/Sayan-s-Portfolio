@@ -60,7 +60,7 @@ export default function AboutPage() {
               <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-blue-400 to-purple-600 p-1">
                 <div className="w-full h-full rounded-full overflow-hidden bg-background flex items-center justify-center">
                   <Image 
-                    src="/images/ramen.jpg"
+                    src="/images/ramen.jpeg"
                     alt="Sayan Sasmal"
                     width={320}
                     height={320}
