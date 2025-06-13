@@ -9,15 +9,15 @@ import { projects } from "@/data/projects"
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-7xl">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">My Projects</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 py-1 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">My Projects</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Here are some of my recent data analysis projects showcasing different tools and techniques.
           </p>

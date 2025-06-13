@@ -30,8 +30,8 @@ export default function AboutPage() {
   const isInView = useInView(ref, { once: true, amount: 0.1 })
 
   return (
-    <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-7xl">
         <motion.div
           ref={ref}
           className="max-w-4xl mx-auto"
@@ -45,7 +45,7 @@ export default function AboutPage() {
             variants={fadeInUp}
             transition={{ delay: 0.2 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 py-1 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               About Me
             </h1>
             <p className="text-lg text-muted-foreground">Get to know more about my journey in data analysis</p>
@@ -77,7 +77,7 @@ export default function AboutPage() {
               transition={{ delay: 0.4 }}
               className="space-y-4"
             >
-              <h2 className="text-2xl md:text-3xl font-bold mb-6">Passionate About Data-Driven Solutions</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Passionate About Data-Driven Solutions</h2>
               <div className="prose prose-lg dark:prose-invert">
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   I am a self-driven data analysis enthusiast passionate about uncovering insights through data. I have
@@ -101,7 +101,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Skills & Technologies</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Skills & Technologies</h2>
             <div className="flex flex-wrap gap-3 justify-center">
               {skills.map((skill, index) => (
                 <motion.div

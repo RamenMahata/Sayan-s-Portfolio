@@ -90,25 +90,29 @@ export function Navigation() {
           >
             <Link href="/" className="flex items-center space-x-2">
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Sayan Sasmal
+                Portfolio
               </span>
             </Link>
           </motion.div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {NAV_ITEMS.map((item) => (
-              <NavLink 
-                key={item.href}
-                href={item.href}
-                name={item.name}
-                pathname={pathname}
-              />
-            ))}
-            <ThemeToggle />
-          </nav>
+          <div className="flex items-center space-x-6">
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-6">
+              {NAV_ITEMS.map((item) => (
+                <NavLink 
+                  key={item.href}
+                  href={item.href}
+                  name={item.name}
+                  pathname={pathname}
+                />
+              ))}
+            </nav>
+            
+            {/* Theme Toggle */}
+            <div className="hidden md:flex items-center">
+              <ThemeToggle />
+            </div>
 
-          <div className="flex items-center space-x-4">
             {/* Mobile Navigation */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild className="md:hidden">
