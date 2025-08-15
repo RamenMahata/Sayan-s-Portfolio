@@ -2,11 +2,22 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, BarChart3, Database, TrendingUp, Download } from "lucide-react"
+import { ArrowRight, BarChart3, Database, TrendingUp, Download, Brain } from "lucide-react"
 import Link from "next/link"
 import Experience from "@/components/Experience"
+import { useState, useEffect } from "react"
 
 export default function HomePage() {
+  const roles = ["Data Scientist", "Data Analyst", "Data Engineer", "ML Engineer"]
+  const [currentRole, setCurrentRole] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentRole((prev) => (prev + 1) % roles.length)
+    }, 2500)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <motion.div 
       className="min-h-screen"
@@ -74,13 +85,7 @@ export default function HomePage() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <motion.span
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                Hi, I'm{" "}
-              </motion.span>
+              Hi, I'm{" "}
               <motion.span
                 className="inline-block"
                 initial={{ opacity: 0, scale: 0.5, rotateY: 90 }}
@@ -95,34 +100,36 @@ export default function HomePage() {
                 Sayan Sasmal
               </motion.span>
             </motion.h1>
+
+            {/* Floating & Changing Roles */}
             <motion.h2
-              className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-8 text-gray-700 dark:text-gray-300"
+              className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-8 text-gray-700 dark:text-gray-300 h-10"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 1.2 }}>
-                A{" "}
-              </motion.span>
               <motion.span
-                className="relative inline-block"
+                key={currentRole}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1.4 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.6 }}
+                className="relative inline-block"
                 whileHover={{
                   scale: 1.05,
                   textShadow: "0px 0px 8px rgba(59, 130, 246, 0.5)",
                 }}
               >
-                Data Analysis Enthusiast
+                {roles[currentRole]}
                 <motion.div
                   className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600"
                   initial={{ width: 0 }}
                   animate={{ width: "100%" }}
-                  transition={{ duration: 0.8, delay: 1.8 }}
+                  transition={{ duration: 0.8 }}
                 />
               </motion.span>
             </motion.h2>
+
             <motion.p
               className="text-lg md:text-xl mb-12 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
@@ -131,36 +138,25 @@ export default function HomePage() {
             >
               I turn raw data into meaningful insights using Python, Excel, SQL, and BI tools.
             </motion.p>
+
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Button asChild size="lg" className="text-lg px-8 py-3">
-                  <Link href="/projects">
-                    Explore Projects
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Button asChild variant="outline" size="lg" className="text-lg px-8 py-3">
-                  <a href="/resume.pdf" download>
-                    Download Resume
-                    <Download className="ml-2 h-5 w-5" />
-                  </a>
-                </Button>
-              </motion.div>
+              <Button asChild size="lg" className="text-lg px-8 py-3">
+                <Link href="/projects">
+                  Explore Projects
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-3">
+                <a href="/resume.pdf" download>
+                  Download Resume
+                  <Download className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
             </motion.div>
           </div>
         </div>
@@ -182,7 +178,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="text-center p-6 rounded-lg bg-card border"
               initial={{ opacity: 0, y: 20 }}
@@ -222,6 +218,21 @@ export default function HomePage() {
               <TrendingUp className="h-12 w-12 mx-auto mb-4 text-purple-600" />
               <h3 className="text-xl font-semibold mb-2">Business Insights</h3>
               <p className="text-muted-foreground">Solve business problems through statistical analysis and modeling</p>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-6 rounded-lg bg-card border"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true, margin: "-100px" }}
+              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+            >
+              <Brain className="h-12 w-12 mx-auto mb-4 text-red-600" />
+              <h3 className="text-xl font-semibold mb-2">Build ML Models</h3>
+              <p className="text-muted-foreground">
+                Design and train machine learning models using Scikit-learn, TensorFlow, and PyTorch to solve real-world problems.
+              </p>
             </motion.div>
           </div>
         </div>
