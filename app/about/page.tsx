@@ -13,17 +13,29 @@ const fadeInUp = {
 const skills = [
   "Python",
   "SQL",
-  "Excel",
+  "Java",
   "Pandas",
   "NumPy",
   "Matplotlib",
-  "Seaborn",
+  "Scikit-learn",
+  "Deep Learning",
+  "TensorFlow",
+  "Neural Networks",
+  "Apache Hadoop",
+  "Apache Spark",
+  "Azure Databricks",
+  "AWS",
   "Power BI",
-  "Tableau",
+  "Excel",
   "Jupyter",
-  "Git",
-  "Statistics",
-]
+  "Google Colab",
+  "GitHub",
+  "VS Code",
+  "EDA",
+  "Data Cleaning",
+  "MySQL"
+];
+
 
 export default function AboutPage() {
   const ref = useRef(null)

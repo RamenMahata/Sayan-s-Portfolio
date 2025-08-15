@@ -25,28 +25,18 @@ Raw data is often messy, incomplete, or inconsistent. Before we can extract mean
 ## Essential Pandas Functions for Data Cleaning
 
 ### 1. Handling Missing Values
-
 \`\`\`python
 import pandas as pd
 
-# Check for missing values
 df.isnull().sum()
-
-# Drop rows with missing values
 df.dropna()
-
-# Fill missing values
 df.fillna(value=0)
 df.fillna(method='forward')
 \`\`\`
 
 ### 2. Removing Duplicates
-
 \`\`\`python
-# Check for duplicates
 df.duplicated().sum()
-
-# Remove duplicates
 df.drop_duplicates()
 \`\`\`
 
@@ -71,7 +61,6 @@ Creating my first Power BI dashboard was both exciting and challenging. In this 
 ## The Project
 
 I was tasked with creating a sales performance dashboard that would help the management team understand:
-
 - Monthly sales trends
 - Regional performance
 - Top-performing products
@@ -79,39 +68,34 @@ I was tasked with creating a sales performance dashboard that would help the man
 
 ## Step 1: Data Connection
 
-The first step was connecting to our data sources:
-
+Connected to:
 - SQL Server database for sales transactions
 - Excel file for product information
 - CSV file for customer data
 
 ## Step 2: Data Modeling
 
-Creating relationships between tables was crucial for accurate analysis:
-
+Relationships:
 \`\`\`
-Sales Table -> Product Table (Product ID)
-Sales Table -> Customer Table (Customer ID)
-Sales Table -> Date Table (Date)
+Sales -> Product (Product ID)
+Sales -> Customer (Customer ID)
+Sales -> Date (Date)
 \`\`\`
 
 ## Key Visualizations
-
 1. **Line Chart**: Monthly sales trends
 2. **Map**: Regional performance
 3. **Bar Chart**: Top products
 4. **Pie Chart**: Customer segments
 
 ## Lessons Learned
-
-- Start with a clear understanding of business requirements
-- Spend time on data modeling - it's the foundation
-- Keep visualizations simple and focused
-- Test with real users early and often
+- Understand business requirements first
+- Spend time on data modeling
+- Keep visualizations simple
+- Test with real users
 
 ## Conclusion
-
-Building my first Power BI dashboard taught me the importance of understanding both the technical aspects and business context of data visualization.
+Power BI is as much about storytelling as it is about numbers.
     `,
   },
   {
@@ -125,51 +109,69 @@ Building my first Power BI dashboard taught me the importance of understanding b
     content: `
 # Statistical Analysis Fundamentals for Data Analysts
 
-Understanding statistics is crucial for any data analyst. This post covers the fundamental concepts you need to know to make informed decisions based on data.
+Statistics is crucial for any data analyst. This post covers the fundamental concepts you need to know.
 
 ## Descriptive Statistics
-
-Descriptive statistics help us understand the basic features of our data:
-
-### Measures of Central Tendency
-- **Mean**: Average value
-- **Median**: Middle value when sorted
-- **Mode**: Most frequently occurring value
-
-### Measures of Variability
-- **Range**: Difference between max and min
-- **Variance**: Average squared deviation from mean
-- **Standard Deviation**: Square root of variance
+- Mean, Median, Mode
+- Range, Variance, Standard Deviation
 
 ## Inferential Statistics
+- Hypothesis Testing: null vs alternative, α, test statistic, p-value
+- Common Tests: t-test, Chi-square, ANOVA
 
-Inferential statistics help us make conclusions about populations based on sample data.
-
-### Hypothesis Testing
-
-The process of testing assumptions about population parameters:
-
-1. State null and alternative hypotheses
-2. Choose significance level (α)
-3. Calculate test statistic
-4. Make decision based on p-value
-
-### Common Tests
-- **t-test**: Compare means
-- **Chi-square**: Test independence
-- **ANOVA**: Compare multiple groups
-
-## Practical Applications
-
-Understanding these concepts helps in:
+## Applications
 - A/B testing
-- Quality control
 - Market research
 - Performance analysis
 
 ## Conclusion
-
-Statistical knowledge empowers data analysts to make confident, data-driven decisions and communicate findings effectively to stakeholders.
+Statistics empowers data analysts to make confident, data-driven decisions.
     `,
   },
-]
+  {
+    id: 4,
+    title: "Building a CNN Model for Skin Disease Detection",
+    slug: "cnn-skin-disease-detection",
+    excerpt:
+      "A deep dive into how I developed a CNN-based image classification model to detect skin diseases with PyTorch.",
+    date: "2025-01-10",
+    readTime: "14 min read",
+    content: `
+# Building a CNN Model for Skin Disease Detection
+
+In this blog, I share how I created a deep learning model to detect various skin diseases using PyTorch.
+
+## Steps
+1. **Dataset Preparation**: Preprocessing, augmentation, and label encoding.
+2. **Model Architecture**: Convolutional layers, pooling, fully connected layers.
+3. **Training**: Optimizers, loss functions, early stopping.
+4. **Evaluation**: Accuracy, precision, recall, confusion matrix.
+
+## Conclusion
+CNNs can be powerful in healthcare when combined with quality data and proper preprocessing.
+    `,
+  },
+  {
+    id: 5,
+    title: "Predicting TCS Stock Prices with Machine Learning",
+    slug: "tcs-stock-price-prediction",
+    excerpt:
+      "A case study on predicting TCS stock prices using regression techniques, EDA, and feature engineering.",
+    date: "2025-01-05",
+    readTime: "10 min read",
+    content: `
+# Predicting TCS Stock Prices with Machine Learning
+
+This project involved building a regression model to predict TCS stock prices using historical data.
+
+## Workflow
+1. **EDA**: Identified patterns and seasonal trends.
+2. **Feature Engineering**: Created moving averages, lag features.
+3. **Modeling**: Tried multiple regression models and compared R², RMSE, MAE.
+4. **Results**: Best model achieved strong predictive performance.
+
+## Conclusion
+Feature engineering played a huge role in improving model accuracy.
+    `,
+  }
+];
