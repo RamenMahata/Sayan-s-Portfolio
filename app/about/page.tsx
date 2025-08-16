@@ -18,6 +18,7 @@ const skills = [
   "NumPy",
   "Matplotlib",
   "Scikit-learn",
+  "Machine Learning",
   "Deep Learning",
   "TensorFlow",
   "Neural Networks",
@@ -92,11 +93,11 @@ export default function AboutPage() {
               <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Passionate About Data-Driven Solutions</h2>
               <div className="prose prose-lg dark:prose-invert">
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  I am a self-driven data analysis enthusiast passionate about uncovering insights through data. I have
-                  hands-on experience with Python (Pandas, NumPy, Matplotlib), SQL, Excel, Power BI, and Tableau.
+                  I am a self-driven data science enthusiast passionate about uncovering insights through data. I have
+                  hands-on experience with Python (Pandas, NumPy, Matplotlib), SQL, Excel, Power BI, Machine Learning and Deep Learning.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  I enjoy building dashboards, solving business problems, and visualizing complex data in a simple way.
+                  I enjoy building ML model, dashboards, solving business problems, and visualizing complex data in a simple way.
                   My goal is to help organizations make informed decisions by transforming raw data into actionable
                   insights.
                 </p>
