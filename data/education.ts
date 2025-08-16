@@ -12,14 +12,14 @@ export interface EducationItem {
 export const educations: EducationItem[] = [
   {
     degree: "Bachelor of Technology in Computer Science and Engineering",
-    institution: "University College of Engineering & Technology, Hazaribagh",
-    duration: "2021 – 2025",
-    location: "Hazaribagh, Jharkhand",
-    gpa: "8.5/10",
+    institution: "College of Engineering & Management, Kolaghat",
+    duration: "Sept 2022 – June 2026",
+    location: "Kolaghat, West Bengal",
+    gpa: "7.83/10",
     description: [
-      "Comprehensive study of computer science fundamentals including algorithms, data structures, and software engineering",
-      "Specialized coursework in machine learning, artificial intelligence, and web development",
-      "Active participation in coding competitions and technical projects"
+      "Studied computer science fundamentals including algorithms, data structures, operating systems, and software engineering.",
+      "Completed coursework in machine learning, artificial intelligence, and database management systems.",
+      "Participated in hackathons, coding competitions, and technical projects."
     ],
     subjects: [
       "Data Structures & Algorithms",
@@ -29,39 +29,57 @@ export const educations: EducationItem[] = [
       "Software Engineering",
       "Machine Learning",
       "Artificial Intelligence",
-      "Web Technologies",
+      "Compiler Design",
       "Object-Oriented Programming",
       "Computer Architecture"
     ],
     achievements: [
-      "Dean's List for academic excellence",
-      "Top 10% in class ranking",
-      "Active member of coding club",
-      "Participated in multiple hackathons and coding competitions"
+      "Maintained strong academic performance with CGPA of 7.83/10.",
+      "Actively involved in academic and project-based learning."
     ]
   },
   {
-    degree: "Higher Secondary Education (12th Grade)",
-    institution: "Don Bosco School",
-    duration: "2019 – 2021",
-    location: "Hazaribagh, Jharkhand",
-    gpa: "85%",
+    degree: "Higher Secondary (12th Grade)",
+    institution: "Ramakrishna Mission Vidyabhavan, Medinipur",
+    duration: "April 2022",
+    location: "Medinipur, West Bengal",
+    gpa: "86.2%",
     description: [
-      "Completed higher secondary education with focus on Science stream",
-      "Strong foundation in Mathematics, Physics, and Chemistry",
-      "Developed analytical and problem-solving skills"
+      "Completed higher secondary education under WBCHSE with Science stream.",
+      "Focused on Mathematics, Physics, Chemistry, and Statistics.",
+      "Strengthened analytical and logical reasoning skills."
     ],
     subjects: [
       "Mathematics",
       "Physics",
       "Chemistry",
-      "Computer Science",
+      "Statistics",
       "English"
     ],
     achievements: [
-      "Distinction in Mathematics and Computer Science",
-      "Active participant in science exhibitions",
-      "Member of school debate team"
+      "Strengthened mathematical skills like statistics."
+    ]
+  },
+  {
+    degree: "Secondary Education (10th Grade)",
+    institution: "Bikrampur High School (H.S.)",
+    duration: "March 2020",
+    location: "Bikrampur, West Bengal",
+    gpa: "93.43%",
+    description: [
+      "Completed secondary education under WBBSE with excellent academic record.",
+      "Built strong fundamentals in science and mathematics."
+    ],
+    subjects: [
+      "Mathematics",
+      "Science",
+      "English",
+      "History",
+      "Geography"
+    ],
+    achievements: [
+      "Secured 93.43% in WBBSE.",
+      "Awarded for outstanding academic performance."
     ]
   }
 ];
