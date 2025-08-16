@@ -138,7 +138,7 @@ export default function ContactPage() {
                 </a>
 
                 <a
-                  href="https://github.com/sayan-sasmal"
+                  href="https://github.com/sayansasmal"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-4 rounded-lg bg-card border hover:bg-accent transition-colors"

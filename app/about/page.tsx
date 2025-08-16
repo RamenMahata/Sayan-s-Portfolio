@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { useRef } from "react"
+import Education from "@/components/Education"   // ✅ using your Education component
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -18,6 +19,7 @@ const skills = [
   "NumPy",
   "Matplotlib",
   "Scikit-learn",
+  "Machine Learning",
   "Deep Learning",
   "TensorFlow",
   "Neural Networks",
@@ -36,7 +38,6 @@ const skills = [
   "MySQL"
 ];
 
-
 export default function AboutPage() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
@@ -52,6 +53,7 @@ export default function AboutPage() {
           variants={fadeInUp}
           transition={{ duration: 0.6 }}
         >
+          {/* About Me */}
           <motion.div 
             className="text-center mb-16"
             variants={fadeInUp}
@@ -63,7 +65,9 @@ export default function AboutPage() {
             <p className="text-lg text-muted-foreground">Get to know more about my journey in data analysis</p>
           </motion.div>
 
+          {/* Profile Section */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            {/* Profile Image */}
             <motion.div
               variants={fadeInUp}
               transition={{ delay: 0.3 }}
@@ -84,19 +88,22 @@ export default function AboutPage() {
               </div>
             </motion.div>
 
+            {/* Bio */}
             <motion.div
               variants={fadeInUp}
               transition={{ delay: 0.4 }}
               className="space-y-4"
             >
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Passionate About Data-Driven Solutions</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Passionate About Data-Driven Solutions
+              </h2>
               <div className="prose prose-lg dark:prose-invert">
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  I am a self-driven data analysis enthusiast passionate about uncovering insights through data. I have
-                  hands-on experience with Python (Pandas, NumPy, Matplotlib), SQL, Excel, Power BI, and Tableau.
+                  I am a self-driven data science enthusiast passionate about uncovering insights through data. I have
+                  hands-on experience with Python (Pandas, NumPy, Matplotlib), SQL, Excel, Power BI, Machine Learning, Deep Learning & Big Data.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  I enjoy building dashboards, solving business problems, and visualizing complex data in a simple way.
+                  I enjoy building ML models, dashboards, solving business problems, and visualizing complex data in a simple way.
                   My goal is to help organizations make informed decisions by transforming raw data into actionable
                   insights.
                 </p>
@@ -108,12 +115,15 @@ export default function AboutPage() {
             </motion.div>
           </div>
 
+          {/* Skills Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Skills & Technologies</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Skills & Technologies
+            </h2>
             <div className="flex flex-wrap gap-3 justify-center">
               {skills.map((skill, index) => (
                 <motion.div
@@ -139,6 +149,9 @@ export default function AboutPage() {
               ))}
             </div>
           </motion.div>
+
+          {/* ✅ Education Section */}
+          <Education />
         </motion.div>
       </div>
     </div>
