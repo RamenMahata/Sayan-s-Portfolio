@@ -35,6 +35,7 @@ const NAV_ITEMS = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },
+  { name: "Education", href: "/education" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ] as const
